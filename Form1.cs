@@ -19,16 +19,16 @@ namespace ReportViewerOrders
         }
 
         private void Form1_Load(object sender, EventArgs e)
-        {
-            this.Информация_по_заказамTableAdapter.Fill(this.TestSalesDataSet.Информация_по_заказам, dateTimePicker1.Value.Date.ToString("yyyyMMdd"), dateTimePicker2.Value.Date.ToString("yyyyMMdd"));
+        { 
+            this.Информация_по_заказамTableAdapter.Fill(this.DBDataSet.Информация_по_заказам, dateTimePicker1.Value.Date.ToString("yyyyMMdd"), dateTimePicker2.Value.Date.ToString("yyyyMMdd"));
             this.reportViewer1.RefreshReport();
         }
 
         private void load_Click(object sender, EventArgs e)
         {
-           
-            this.Информация_по_заказамTableAdapter.Fill(this.TestSalesDataSet.Информация_по_заказам, dateTimePicker1.Value.Date.ToString("yyyyMMdd"), dateTimePicker2.Value.Date.ToString("yyyyMMdd"));
-            this.reportViewer1.RefreshReport();
+           this.Информация_по_заказамTableAdapter.Fill(this.DBDataSet.Информация_по_заказам, dateTimePicker1.Value.Date.ToString("yyyyMMdd"), dateTimePicker2.Value.Date.ToString("yyyyMMdd"));
+           this.reportViewer1.RefreshReport();
         }
+
     }
 }
